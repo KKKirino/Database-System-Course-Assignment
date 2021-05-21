@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.header {
+    background-color: #2196F3;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.footer {
+    background-color: #444;
+    color: white;
+    padding: 10px;
+}
+
+.tips {
+    font-size:13px;
+}
+
+.courselist {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(226, 226, 226);
+    color:rgb(0, 0, 0)
+}
+
+.topmenu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #777;
+}
+
+.topmenu li {
+    float: right;
+}
+
+.topmenu li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.topmenu li a:hover {
+    background-color: #222;
+}
+
+.topmenu li a.active {
+    color:white;
+    background-color: #4CAF50;
+}
+
+
+.column {
+    /* float: left; */
+    padding: 15px;
+    height: auto; 
+    min-height: 80vh;
+}
+
+.clearfix {
+    content: "";
+    clear: both;
+    display: flex;
+}
+
+.sidemenu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidemenu a{
+    list-style-type: none;
+    margin-bottom: 4px;
+    display: block;
+    padding: 8px;
+    background-color: rgb(213, 231, 238);
+    text-decoration: none;
+    color: rgb(66, 66, 66);
+}
+
+.sidemenu div[class^="sub-item-name-"]  {
+    list-style-type: none;
+    margin-bottom: 6px;
+    display: block;
+    padding: 11px;
+    background-color: rgb(231, 236, 240);
+    text-decoration: none;
+    color: rgb(87, 86, 86);
+    font-size:13px
+}
+
+.sidemenu div[class^="sub-sub-item-name-"]  {
+    list-style-type: none;
+    margin-bottom: 6px;
+    display: block;
+    padding: 11px;
+    background-color: rgb(255, 255, 255);
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size:12px
+}
+
+
+.sidemenu a:hover {
+    background-color: #555;
+    color: white;
+}
+.sidemenu div[class^="sub-item-name-"]:hover  {
+    background-color: rgb(160, 157, 157);
+    color: white;
+}
+
+.sidemenu div[class^="sub-sub-item-name-"]:hover  {
+    background-color: rgb(92, 86, 86);
+    color: white;
+}
+
+.sidemenu a.active {
+    background-color: #008CBA;
+    color: white;
+}
+
+
+.footer li {
+    margin-bottom: 4px;
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+a.color1:link {
+    color: white ; 
+    text-decoration:underline;
+}
+
+a.color1:hover {
+    color: #008CBA; 
+    text-decoration:underline;
+}
+
+/* a.color1:visited {
+    color: #FFFFFF; 
+    text-decoration:none;
+} */
