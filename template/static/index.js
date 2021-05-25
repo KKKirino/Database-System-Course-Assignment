@@ -38,7 +38,7 @@ function loadAndRenderHeader() {
 
 
 function renderSiderItem(data = {}) {
-    let sideTemplate ='<a class="side-item-name-$id" onclick="loadAndRenderSubItem(event)">$name</a>' + '\n' +'<div class="item-content-$id"></div>'
+    let sideTemplate ='<a class="side-item-name-$id" onclick="loadAndRenderCourseItem(event);loadAndRenderSubItem(event);">$name</a>' + '\n' +'<div class="item-content-$id"></div>'
     Object.keys(data).forEach(key => {
         sideTemplate = sideTemplate.replaceAll('$' + key, data[key])
     })
@@ -60,7 +60,7 @@ function loadAndRenderSide() {
 }
 
 function renderSubSiderItem(data = {}) {
-    let subsideTemplate ='<div class="sub-item-name-$id" onclick="loadAndRenderSubSubItem(event)">$name</div>' + '\n' + '<div class="sub-sub-content-name-$id"></div>'
+    let subsideTemplate ='<div class="sub-item-name-$id" onclick="loadAndRenderCourseItem(event);loadAndRenderSubSubItem(event);">$name</div>' + '\n' + '<div class="sub-sub-content-name-$id"></div>'
     Object.keys(data).forEach(key => {
         subsideTemplate = subsideTemplate.replaceAll('$' + key, data[key])
     })
@@ -118,9 +118,12 @@ function renderCourseItem(data = {}) {
 function loadAndRenderCourseItem(evt) {
     const dom = evt.target
     var cont = dom.className; 
+    var index = cont.search(/\d/)
+    var num1 = cont.substring(index, cont.length)
+    console.log(num1)
     targetEle = document.getElementsByClassName("courselist")[0]
     console.log(targetEle.innerHTML)
-    get('/course/'+ cont).then(subjects => {
+    get('/course/'+ num1).then(subjects => {
         // const subsider = document.querySelector('.' + cont)
         const courseContent = subjects.map(renderCourseItem).join('\n')
         targetEle.innerHTML = courseContent

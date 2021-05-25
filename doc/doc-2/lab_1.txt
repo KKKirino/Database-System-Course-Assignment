@@ -1,0 +1,170 @@
+/*==============================================================*/
+/* DBMS name:      MySQL 5.0                                    */
+/* Created on:     2021/5/6 21:39:22                            */
+/*==============================================================*/
+
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = 
+r.constid and o.type = 'F')
+   where r.fkeyid = object_id('CourseItem') and o.name = 
+'FK_author_course')
+alter table CourseItem
+   drop constraint FK_author_course
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = 
+r.constid and o.type = 'F')
+   where r.fkeyid = object_id('media') and o.name = 
+'FK_author_media')
+alter table media
+   drop constraint FK_author_media
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = 
+r.constid and o.type = 'F')
+   where r.fkeyid = object_id('Course_Media_Rel') and o.name = 
+'FK_Course_Media_Rel')
+alter table Course_Media_Rel
+   drop constraint FK_Course_Media_Rel
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = 
+r.constid and o.type = 'F')
+   where r.fkeyid = object_id('Course_Media_Rel') and o.name = 
+'FK_Course_Media_Rel2')
+alter table Course_Media_Rel
+   drop constraint FK_Course_Media_Rel2
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = 
+r.constid and o.type = 'F')
+   where r.fkeyid = object_id('course_subject') and o.name = 
+'FK_course_subject')
+alter table course_subject
+   drop constraint FK_course_subject
+go
+
+
+IF OBJECT_ID(N'CourseItem', N'U') IS  NOT  NULL
+drop table CourseItem;
+
+IF OBJECT_ID(N'Course_Media_Rel', N'U') IS  NOT  NULL
+drop table Course_Media_Rel;
+
+IF OBJECT_ID(N'author', N'U') IS  NOT  NULL
+drop table author;
+
+IF OBJECT_ID(N'course_subject', N'U') IS  NOT  NULL
+drop table course_subject;
+
+IF OBJECT_ID(N'media', N'U') IS  NOT  NULL
+drop table media;
+
+IF OBJECT_ID(N'subject', N'U') IS  NOT  NULL
+drop table subject;
+
+/*==============================================================*/
+/* Table: CourseItem                                            */
+/*==============================================================*/
+create table CourseItem
+(
+   courseID             integer not null,
+   authorID             integer,
+   courseDesc           varchar(1024),
+   courseName           varchar(1024),
+   keyword              varchar(1024),
+   author               varchar(1024),
+   source               varchar(1024),
+   type                 varchar(10),
+   cnt					   integer,
+   primary key (courseID)
+);
+
+/*==============================================================*/
+/* Table: Course_Media_Rel                                      */
+/*==============================================================*/
+create table Course_Media_Rel
+(
+   courseID             integer not null,
+   mediaID              integer not null,
+   primary key (courseID, mediaID)
+);
+
+/*==============================================================*/
+/* Table: author                                                */
+/*==============================================================*/
+create table author
+(
+   authorID             integer not null,
+   authorName           varchar(1024) not null,
+   primary key (authorID)
+);
+
+/*==============================================================*/
+/* Table: course_subject                                        */
+/*==============================================================*/
+create table course_subject
+(
+   courseID             integer not null,
+   subjectID            integer not null,
+   primary key (courseID, subjectID)
+);
+
+/*==============================================================*/
+/* Table: media                                                 */
+/*==============================================================*/
+create table media
+(
+   mediaID              integer not null,
+   authorID             integer,
+   mediaName            varchar(1024),
+   url                  VARCHAR(2083),
+   primary key (mediaID)
+);
+
+/*==============================================================*/
+/* Table: subject                                               */
+/*==============================================================*/
+create table subject
+(
+   subjectID            integer not null,
+   subjectName          varchar(1024) not null,
+   parentID             integer,
+   primary key (subjectID)
+);
+
+alter table CourseItem add constraint FK_author_course foreign key 
+(authorID)
+      references author (authorID) on delete CASCADE on update 
+CASCADE;
+
+alter table Course_Media_Rel add constraint FK_Course_Media_Rel 
+foreign key (courseID)
+      references CourseItem (courseID) on delete CASCADE on update 
+CASCADE;
+
+alter table Course_Media_Rel add constraint FK_Course_Media_Rel2 
+foreign key (mediaID)
+      references media (mediaID) on delete CASCADE on update 
+CASCADE;
+
+alter table course_subject add constraint FK_course_subject foreign key 
+(courseID)
+      references CourseItem (courseID) on delete CASCADE on update 
+CASCADE;
+
+alter table course_subject add constraint FK_course_subject2 foreign key 
+(subjectID)
+      references subject (subjectID) on delete CASCADE on update 
+CASCADE;
+
+alter table media add constraint FK_author_media foreign key (authorID)
+      references author (authorID) on delete NO ACTION on update 
+NO ACTION;
+
+

@@ -33,7 +33,7 @@ def subhome(id):
         print(row)
     return jsonify([{ 'name': r[0], 'id': r[1] } for r in result])
 
-@app.route("/course/sub-sub-item-name-<int:id>")
+@app.route("/course/<int:id>")
 def course(id):
     cursor = cnxn.cursor()
     cursor.execute("select courseID from dbo.course_subject where subjectID = %d" %(id))
@@ -80,13 +80,13 @@ def dele(id):
         print(row)
     return "Delect successfully!"
 
-@app.route('/post-sum', methods=['GET', 'POST'])
-def index():
-    if request.method == 'POST':
-        data = request.get_json()
-        return {
-            "res": data['x'] + data['y']
-        }
+# @app.route('/post-sum', methods=['GET', 'POST'])
+# def index():
+#     if request.method == 'POST':
+#         data = request.get_json()
+#         return {
+#             "res": data['x'] + data['y']
+#         }
 
 @app.route('/user/add', methods=['GET', 'POST'])
 def add():
