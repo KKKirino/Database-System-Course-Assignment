@@ -150,7 +150,7 @@
   \end{figure*}
 
   \subsection{采用 Insert 语句将采编的思政资源素材录入到数据库中}
-  以插入采编者信息为例，采用的语句见\verb|insert-author.sql|，具体结果见\ref{fig:insert}。
+  插入采编者信息，采用的语句见\verb|insert-author.sql|，具体结果见\ref{fig:insert}。
 
   \begin{file}[insert-author.sql]
     \begin{lstlisting}[language=sql]
@@ -168,9 +168,104 @@
   \begin{figure*}[h]
     \centering
     \includegraphics[width=0.4\textwidth]{insert.png}
-    \caption{插入操作}
+    \caption{插入采编者}
     \label{fig:insert}
   \end{figure*}
+
+  插入学科信息，采用的语句见\verb|insert-subject.sql|，具体结果见\ref{fig:insert-subject}。
+
+  \begin{file}[insert-subject.sql]
+    \begin{lstlisting}[language=sql]
+  insert into dbo.subject(subjectID, subjectName, parentID) values
+  (1,'基础学科', '0');
+  insert into dbo.subject(subjectID, subjectName, parentID) values
+  (2,'信息科技', '0');
+  insert into dbo.subject(subjectID, subjectName, parentID) values
+  (3,'医药卫生科技', '0');
+  insert into dbo.subject(subjectID, subjectName, parentID) values
+  (4,'哲学与人文科学', '0');
+  insert into dbo.subject(subjectID, subjectName, parentID) values
+  (5,'基础化学', '1');
+    // ...
+    \end{lstlisting}
+  \end{file}
+
+  \begin{figure*}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{insert-subject.png}
+    \caption{插入学科信息}
+    \label{fig:insert-subject}
+  \end{figure*}
+
+  插入思政素材，采用的语句见\verb|insert-course.sql|，具体结果见\ref{fig:insert-course}。
+
+  \begin{file}[insert-course.sql]
+    \begin{lstlisting}[language=sql]
+  insert into dbo.CourseItem(courseID, authorID, courseDesc, courseName, 
+  keyword, author, source, type, cnt) values(1, 8,'维护安全问题', 
+  'Linux操作系统维护技术探析', 'Linux系统', '方木龙', 
+  '中移互联网有限公司', '1', 0);
+  insert into dbo.CourseItem(courseID, authorID, courseDesc, courseName, 
+  keyword, author, source, type, cnt) values(2, 9,'非易失主存构建存储系统
+  , '非易失主存的系统软件研究进展', '非易失主存', '舒继武', '中国科学 : 
+  信息科学', '2', 0);
+  insert into dbo.CourseItem(courseID, authorID, courseDesc, courseName, 
+  keyword, author, source, type, cnt) values(3, 10,'混合教学模式', 
+  '混合教学模式在“操作系统”中的研究和实践', '混合模式', '杨婷婷', 
+  '无线互联科技', '1', 0);
+  insert into dbo.CourseItem(courseID, authorID, courseDesc, courseName, 
+  keyword, author, source, type, cnt) values(4, 11,'课程教学内容重组', 
+  '基于 ＯＢＥ理念的操作系统原理课程教学内容重组', '操作系统', '张秋红', 
+  '兰州文理学院学报', '1', 0);
+    // ...
+    \end{lstlisting}
+  \end{file}
+
+  \begin{figure*}[h]
+    \centering
+    \includegraphics[width=\textwidth]{insert-course.png}
+    \caption{插入思政素材}
+    \label{fig:insert-course}
+  \end{figure*}
+
+  插入思政素材与学科之间的多对多关系，采用的语句见\verb|insert-rel.sql|，具体结果见可以体现在前端界面显示上，点击学科可以显示出相应的思政素材。
+
+  \begin{file}[insert-rel.sql]
+    \begin{lstlisting}[language=sql]
+      insert into dbo.course_subject(courseID, subjectID) values(1, 11)
+      insert into dbo.course_subject(courseID, subjectID) values(2, 11)
+      insert into dbo.course_subject(courseID, subjectID) values(3, 11)
+      insert into dbo.course_subject(courseID, subjectID) values(4, 11)
+    // ...
+    \end{lstlisting}
+  \end{file}
+
+  插入多媒体素材素材，采用的语句见\verb|insert-media.sql|，具体结果见\ref{fig:insert-media}。
+
+  \begin{file}[insert-media.sql]
+    \begin{lstlisting}[language=sql]
+      insert into dbo.media(mediaID, authorID,mediaName,url) values(1,2,
+      '王道考研-操作系统','https://www.bilibili.com/video/BV1YE411D7nHfrom
+      =search
+    &seid=13181938279769288528')
+      insert into dbo.media(mediaID, authorID,mediaName,url) values(2,2,
+      '谭浩强老师C语言教程程序设计','https://www.bilibili.com/video/
+      BV1VW41187zq?from=search&seid=12389279456804192620')
+      insert into dbo.media(mediaID, authorID,mediaName,url) values(3,1,
+      '计算机软件技术基础','https://www.bilibili.com/video/BV1xa4y1j7ZN?
+      from=search&seid=1409768092267906681')
+    // ...
+    \end{lstlisting}
+  \end{file}
+
+  \begin{figure*}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{insert-media.png}
+    \caption{插入多媒体素材}
+    \label{fig:insert-media}
+  \end{figure*}
+
+
 
   \subsection{采用 Update 语句更新思政资源素材的点击阅读次数}
   以将每个\verb|type|为"1"的思政素材点击次数加1为例，具体语句见\verb|update-cnt.sql|，结果见图\ref{fig:update}。

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.3.2)  24 MAY 2021 17:41
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.3.2)  29 MAY 2021 11:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1024,27 +1024,39 @@ File: insert.png Graphic file (type bmp)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+[4]
+File: insert-subject.png Graphic file (type bmp)
+<insert-subject.png>
+
+Overfull \hbox (2.76035pt too wide) in paragraph at lines 209--210
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[5]
+File: insert-course.png Graphic file (type bmp)
+<insert-course.png>
+
+Overfull \hbox (8.7604pt too wide) in paragraph at lines 248--249
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[6]
+File: insert-media.png Graphic file (type bmp)
+<insert-media.png>
 File: update.png Graphic file (type bmp)
 <update.png>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[4]
+ [7]
 File: select.png Graphic file (type bmp)
 <select.png>
- [5]
 File: desc.png Graphic file (type bmp)
 <desc.png>
+ [8]
 File: dba1.png Graphic file (type bmp)
 <dba1.png>
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 File: dba2.png Graphic file (type bmp)
 <dba2.png>
 
-Overfull \hbox (9.45187pt too wide) in paragraph at lines 261--268
+Overfull \hbox (9.45187pt too wide) in paragraph at lines 356--363
 []\TU/STZHONGS.ttf(1)/m/n/10.95 登 录[][]\TU/lmtt/m/n/10.95 dba2[]\TU/STZHONGS.ttf(1)/m/n/10.95 账 号，|  输 入[][][][][][][][][][][]语 句，|  会 报 错。|  这 是 由 于[][]\TU/lmtt/m/n/10.95 dba2[]\TU/STZHONGS.ttf(1)/m/n/10.95 对 于 表[][]\TU/lmtt/m/n/10.95 author[]\TU/STZHONGS.ttf(1)/m/n/10.95 只
  []
 
@@ -1052,27 +1064,27 @@ Overfull \hbox (9.45187pt too wide) in paragraph at lines 261--268
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (14.95973pt too wide) in paragraph at lines 269--270
+Overfull \hbox (14.95973pt too wide) in paragraph at lines 364--365
 []\TU/STZHONGS.ttf(1)/m/n/10.95 登 录[][]\TU/lmtt/m/n/10.95 dba3[]\TU/STZHONGS.ttf(1)/m/n/10.95 账 号，|  输 入[][][][][][][][][][][][][][][][][][][][][][][][][]语
  []
 
-[6] (d:/texlive/2020/texmf-dist/tex/latex/listings/lstlang1.sty
+(d:/texlive/2020/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
-Overfull \hbox (8.7604pt too wide) in paragraph at lines 283--284
+Overfull \hbox (8.7604pt too wide) in paragraph at lines 378--379
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[7]
+[9]
 File: userget.png Graphic file (type bmp)
 <userget.png>
 
-Overfull \hbox (2.91473pt too wide) in paragraph at lines 302--303
+Overfull \hbox (2.91473pt too wide) in paragraph at lines 397--398
 []\TU/STZHONGS.ttf(1)/m/n/10.95 以[][][][][][][][][][][][][][][][][][][]路 由 为 例，|  实 现 了 在 表[][]\TU/lmtt/m/n/10.95 author[]\TU/STZHONGS.ttf(1)/m/n/10.95 中
  []
 
 
-Overfull \hbox (4.75589pt too wide) in paragraph at lines 307--307
+Overfull \hbox (4.75589pt too wide) in paragraph at lines 402--402
 []\TU/lmtt/m/n/10 $  curl -d '{"name": "Karina", "ID": 40}' -H 'Content-Type:application/ json' http://
  []
 
@@ -1081,7 +1093,7 @@ Package xeCJK Warning: Unknown CJK family `\CJKsfdefault' is being ignored.
 (xeCJK)                
 (xeCJK)                Try to use `\setCJKsansfont[...]{...}' to define it.
 
-[8]
+[10]
 File: useradd.png Graphic file (type bmp)
 <useradd.png>
 File: home.png Graphic file (type bmp)
@@ -1100,7 +1112,7 @@ File: sideitem.png Graphic file (type bmp)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[9] [10] [11] (./lab_1.txt [12] [13] [14]
+[11] [12] [13] (./lab_1.txt [14] [15] [16]
 Overfull \hbox (11.22966pt too wide) in paragraph at lines 156--157
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -1115,7 +1127,7 @@ Overfull \hbox (11.22966pt too wide) in paragraph at lines 166--167
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-) [15] (./app.txt
+) [17] (./app.txt
 Overfull \hbox (17.79971pt too wide) in paragraph at lines 11--12
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -1130,7 +1142,7 @@ Overfull \hbox (17.79971pt too wide) in paragraph at lines 23--24
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[16]
+[18]
 Overfull \hbox (4.6596pt too wide) in paragraph at lines 51--52
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -1140,12 +1152,12 @@ Overfull \hbox (17.79971pt too wide) in paragraph at lines 61--62
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[17]
+[19]
 Overfull \hbox (30.93982pt too wide) in paragraph at lines 124--125
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-) [18] (d:/texlive/2020/texmf-dist/tex/latex/listings/lstlang1.sty
+) [20] (d:/texlive/2020/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) (d:/texlive/2020/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
@@ -1174,7 +1186,7 @@ Overfull \hbox (44.07993pt too wide) in paragraph at lines 49--50
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[19]) [20] (./index.txt
+[21]) [22] (./index.txt
 Overfull \hbox (24.36977pt too wide) in paragraph at lines 17--18
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -1194,7 +1206,7 @@ Overfull \hbox (50.64998pt too wide) in paragraph at lines 43--44
 [][][][][][][][][][][][][][][][][][][] 
  []
 
-[21]
+[23]
 Overfull \hbox (76.93019pt too wide) in paragraph at lines 67--68
 [][][][][][][][][][][][][][][][][][] 
  []
@@ -1229,7 +1241,7 @@ Overfull \hbox (70.36014pt too wide) in paragraph at lines 97--98
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[22]
+[24]
 Overfull \hbox (37.50987pt too wide) in paragraph at lines 110--111
 [][][][][][][][][][][][][][][][][][] 
  []
@@ -1259,18 +1271,18 @@ Overfull \hbox (11.22966pt too wide) in paragraph at lines 139--140
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[23]) [24] (./css.txt [25] [26] [27]) [28] (./database.aux)
+[25]) [26] (./css.txt [27] [28] [29]) [30] (./database.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 35420 strings out of 479418
- 886317 string characters out of 5888106
- 1508209 words of memory out of 5000000
- 52317 multiletter control sequences out of 15000+600000
+ 35483 strings out of 479418
+ 888237 string characters out of 5888106
+ 1514897 words of memory out of 5000000
+ 52377 multiletter control sequences out of 15000+600000
  542513 words of font info for 75 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  68i,9n,98p,917b,1786s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on database.pdf (28 pages).
+Output written on database.pdf (30 pages).
