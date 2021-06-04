@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.3.2)  4 JUN 2021 19:10
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.3.2)  4 JUN 2021 19:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1023,22 +1023,14 @@ LaTeX Font Warning: Font shape `TU/STZHONGS.ttf(1)/b/n' undefined
 ]
 File: CDM模型.png Graphic file (type bmp)
 <CDM模型.png>
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 File: LDM模型.png Graphic file (type bmp)
 <LDM模型.png>
 File: PDM模型.png Graphic file (type bmp)
 <PDM模型.png>
-[2]
+ [2] [3]
 File: 候选键.png Graphic file (type bmp)
 <候选键.png>
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[3] [4] [5]
+ [4] [5]
 File: ../report/CDM.pdf Graphic file (type pdf)
 <use ../report/CDM.pdf>
 File: ../report/CDM.pdf Graphic file (type pdf)
@@ -1886,7 +1878,7 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Here is how much of TeX's memory you used:
  35049 strings out of 479418
  882685 string characters out of 5888106
- 1299136 words of memory out of 5000000
+ 1298136 words of memory out of 5000000
  51955 multiletter control sequences out of 15000+600000
  542497 words of font info for 73 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
